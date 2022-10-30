@@ -1,0 +1,130 @@
+
+.menu-content .btn-menu{
+    padding:0 .5rem;
+    font-size:2rem;
+    display: none;
+}
+
+.menu-content{
+    display:flex;
+    position:sticky;
+    top:0;
+    margin: auto;
+    z-index:10;
+    padding-right:2rem;
+    text-transform:capitalize;
+    background-color:hsl(200, 100%,50%);
+    transition:color .2s, background-color .4s, padding .2s;
+}
+        
+
+.menu-content{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;            
+    width:100%;
+}
+
+.menu-content h1{
+    font-size:1.5rem;
+    padding:1.4rem 3.05rem 1.4rem 1rem; 
+    background-image:linear-gradient(70deg, hsl(180, 70%, 50%) 80%, transparent 80%);
+    color:white;
+    transition:.4s;
+}
+
+.menu-content > ul{
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+    font-size:.8rem;
+}
+.menu-content > ul li{
+    position:relative;
+    transition:.3s;
+    z-index:100;
+}
+
+.menu-content > ul li::after{
+    content:'';
+    display:block;
+    position:absolute;
+    width:0%;
+    height:2px;
+    margin-top:5px;
+    background-color:aqua;
+    transition:.2s;
+}
+
+.menu-content > ul li:hover::after{
+    content:'';    
+    width:100%;
+}
+
+.menu-custom{
+    background-color:black;  
+}
+
+.menu-custom h1{   
+    padding:1rem 3rem 1rem 1rem;
+}
+
+@media screen and (max-width:750px) {
+    
+    .menu-content button.btn-menu{
+        display: block;
+        background-color:transparent;
+        margin-right:1rem;
+        margin:0;
+        padding:.6rem 2rem;
+    }
+    .menu-content button.btn-menu img{
+        display:inline-block;
+        height:20px;
+        width:20px;
+    }
+
+    .menu-content{
+        position:fixed;
+        flex-direction:column;
+        align-items:stretch;
+        justify-content: stretch;        
+        padding:0;
+        background-color:unset;
+    }
+    
+    .menu-mobile{
+        background-color:hsl(200, 100%,50%);
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        width:100%;
+    }
+
+    .menu-content ul{
+        flex-direction:column;
+        width:100%;        
+        gap:0;
+        position:absolute;
+        top:50px;        
+        transform: translateX(-100%);        
+        background-color:hsl(200, 100%,50%);
+        transition:.3s;
+    }
+
+    .menu-content ul[aria-expanded="true"]{
+        width:80%;
+        transform: translateX(0%);
+    }
+
+    .menu-content ul li a{        
+        display:inline-block;
+        padding:1.5rem;
+        width:100%;
+    }
+    .menu-content ul li::after{
+        content:'';
+        display:none;
+    }
+   
+}

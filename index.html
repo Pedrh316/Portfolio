@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/cube.css">
+    <link rel="stylesheet" href="css/accordion.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="menu-content">
+        <div class="menu-mobile">
+            <h1>Logo</h1>
+            <button class="btn-menu" aria-controls="menu-content__list">
+                <img src="./icons/bars-solid.svg" alt="">
+            </button>
+        </div>
+        <ul id="menu-content__list" aria-expanded="false">
+            <li><a href="#introduction">Inicio</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#about">Sobre mim</a></li>
+            <li><a href="#">Fazer postagem</a></li>
+        </ul>
+    </nav>
+
+    <header id="header">
+        <label id="label-dark">
+            <input type="checkbox" name="" id="dark-mode__chk"><span class="chk"></span> Dark mode
+        </label>
+        <h1>Bem vindo!</h1>
+
+        <div class="cube">
+            <div class="face front"><span class="eye-left"></span><span class="eye-right"></span>
+                <div class="mouth"></div>
+            </div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+            <div class="face bottom-shadow"></div>
+        </div>
+
+        <div class="bubble-container">
+            <span class="bubble" style="--i:3"></span>
+            <span class="bubble" style="--i:9.5"></span>
+            <span class="bubble" style="--i:2"></span>
+            <span class="bubble" style="--i:1.2"></span>
+            <span class="bubble" style="--i:7"></span>
+            <span class="bubble" style="--i:2.5"></span>
+            <span class="bubble" style="--i:6"></span>
+            <span class="bubble" style="--i:2.3"></span>
+            <span class="bubble" style="--i:4"></span>
+            <span class="bubble" style="--i:1.5"></span>
+            <span class="bubble" style="--i:2"></span>
+            <span class="bubble" style="--i:8"></span>
+
+        </div>
+    </header>
+    <main>
+
+        <ul class="social-links">
+            <li><a href=""><img class="icons" src="./icons/discord.svg" class="icons" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/in/pedro-costa-883356244/" target="_blank"><img class="icons"
+                        src="./icons/linkedin-in.svg" alt=""></a></li>
+            <li><a href="https://github.com/Pedrh316" target="_blank"><img class="icons" src="./icons/github.svg"
+                        alt=""></a></li>
+        </ul>
+
+        <section id="projects" class="container">
+            <h2>Projetos</h2>
+            <div class="row projects-container">
+                <button class="carousel-dot-left"><img src="./icons/arrow-left-solid.svg" class="icon" alt=""></button>
+                <button class="carousel-dot-right">
+                    <img src="./icons/arrow-right-solid.svg" class="icon" alt="">
+                </button>
+                <div class="projects-carousel">
+                    <article>
+                        <div class="projects__content">
+                            <h3>Projeto Infusion</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="projects__content">
+                            <h3>Projeto Infusion</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="projects__content">
+                            <h3>Projeto Infusion</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="projects__content">
+                            <h3>Projeto Infusion</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="projects__content">
+                            <h3>Projeto Infusion</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="projects__content">
+                            <h3>Projeto Infusion</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="qualification-articles-container">
+
+            <section class="qualification col-2-3">
+                <h2>Competências e habilidades</h2>
+                <ul class="competency-list col-2-3">
+                    <li><img src="./icons/html5.svg" alt=""></li>
+                    <li><img src="./icons/css3-alt.svg" alt=""></li>
+                    <li><img src="./icons/js.svg" alt=""></li>
+                    <li><img src="./icons/node.svg" alt="">
+                        <span class="tooltip">Estudando</span>
+                    </li>
+                    <li><img src="./icons/react.svg" alt="">
+                        <span class="tooltip">Estudando</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="articles col-1-3">
+                <div class="articles__header">
+                    <h2>Artigos</h2>
+                    <div class="filter accordion">
+                        <button class="drop-btn">Filtrar</button>
+                        <ul class="dropper">
+                            <li><a href="">HTML</a></li>
+                            <li><a href="">CSS</a></li>
+                            <li><a href="">Javascript</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="articles__content">
+                    <article>
+                        <h3>Artigo 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, exercitationem perferendis quia
+                            laborum ratione veniam ab officiis iure molestiae!</p>
+                        <a href="#">Ler tudo</a>
+                    </article>
+                    <article>
+                        <h3>Artigo 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, exercitationem perferendis quia
+                            laborum ratione veniam ab officiis iure molestiae!</p>
+                        <a href="#">Ler tudo</a>
+                    </article>
+                    <article>
+                        <h3>Artigo 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, exercitationem perferendis quia
+                            laborum ratione veniam ab officiis iure molestiae!</p>
+                        <a href="#">Ler tudo</a>
+                    </article>
+                    <article>
+                        <h3>Artigo 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, exercitationem perferendis quia
+                            laborum ratione veniam ab officiis iure molestiae!</p>
+                        <a href="#">Ler tudo</a>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+
+        <section id="about" class="about container">
+            <h2>Sobre mim</h2>
+            <div class="row">
+
+                <div class="col-2-3">
+                    <div class="accordion">
+                        <div class="drop-btn">
+                            <p>Quem sou?</p>
+                            <span></span>
+                        </div>
+                        <div class="dropper">
+                            <p>
+                                Meu nome é Pedro, tenho 17 anos e pretendo seguir a carreira de programação como desenvolvedor fullstack.
+                                Atualmente estou aprendendo NodeJS.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="drop-btn">
+                            <p>Como entrei em contato com a programação</p>
+                            <span></span>
+                        </div>
+                        <div class="dropper">
+                            <p>
+                                Meu contato com a programação se deu por volta dos meus 14 anos, em 2019, quando tinha iniciado os estudos em Python.
+                                Devido à dificuldade de aprendizado, não prossegui. No entanto, em fevereiro de 2022, através da recomendação de um primo,
+                                comprei um curso na udemy, onde iniciei em HTML, CSS e Javascript. Acredito que devido à parte mais visível e prática das linguagens, 
+                                tive mais interesse, e por isso continuei a estudar.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="drop-btn">
+                            <p>Objetivos</p>
+                            <span></span>
+                        </div>
+                        <div class="dropper">
+                            <p>Seguindo a profissão de Front-end, pretendo ajudar meus pais financeiramente e fazer sites dinâmicos de qualidade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1-3">
+                    <adress>
+                        <b>Nome</b>: Pedro Costa<br>
+                        <b>Email</b>: pedrh315@gmail.com<br>
+                        <b>Cidade</b>: Cristalina - GO<br>
+                        <b>Telefone</b>: (67) 996613617
+                    </adress>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+            <path fill="#0099ff" fill-opacity="1"
+                d="M0,32L60,26.7C120,21,240,11,360,48C480,85,600,171,720,176C840,181,960,107,1080,90.7C1200,75,1320,117,1380,138.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+
+    </footer>
+
+    <script src="js/header.js"></script>
+    <script src="js/emoji.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/darkmode.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+
+    
+@keyframes bubble{
+    0%{                                             
+        transform:translateY(20vh);
+        opacity:.5;
+    }    
+    100%{        
+        transform:translateY(-90vh) scale(2.5);
+        opacity:1;
+    }
+}                        
+        
+.bubble-container{
+    user-select: none;
+    text-align:center;
+    display:flex;
+    margin:auto;
+    gap:60px;
+}
+
+
+.bubble{
+    left:10px;
+    width:15px;
+    height:15px;
+    background-color:deepskyblue;
+    position:relative;
+    transform:translateY(40vh);
+    opacity:0;
+    animation:bubble 5s linear infinite;
+    animation-delay:calc(10s / var(--i));
+    border-radius:50%;
+    z-index:0;
+}
+.bubble:nth-child(even){
+    background-color:aqua;
+}
+        
+
+#header{    
+    height: 60vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+#header h1{
+    line-height:60vh;
+    text-transform: uppercase;
+    text-align:center;
+    font-size:3rem;
+    z-index:5;
+}
+
+
+#label-dark{
+    position:absolute;
+    top:10%;
+    left:10%;
+    z-index:6;
+    line-height:1.5rem;
+}
+
+
+#label-dark .chk{
+    position:relative;
+    width:3rem;
+    height:1.5rem;
+    background-color:hsla(0,0%,50%,.5);
+    float:left;
+    border-radius:1rem;
+}
+
+#label-dark input{
+    height:0;
+    width:0;
+    visibility:hidden;
+}
+
+#label-dark .chk::before{
+    content:'';
+    position:absolute;
+    top:2px;
+    bottom:2px;
+    left:2px;
+    width:45%;
+    background-color:aqua;
+    transition:.3s;
+    border-radius:50%;
+}
+
+#label-dark input:checked + .chk::before{
+    content:'';
+    left:51%;
+}
+
+
+
+
+.social-links {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    right: 0px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: .5rem;
+    transition: padding .2s ease;
+}
+
+.social-links li:nth-child(1) {
+    background-color: #6c59ff;
+}
+
+.social-links li:nth-child(2) {
+    background-color: #17d2ff;
+}
+
+.social-links li:nth-child(3) {
+    background-color: #ff9300;
+}
+
+.social-links li:hover a {
+    padding: .5rem 2rem .5rem .5rem;
+}
+
+.social-links .icons {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+@media screen and (max-width:750px){
+    #header{
+        margin-top:52px;
+    }
+}
+
+

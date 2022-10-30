@@ -1,0 +1,328 @@
+#projects, .about {
+    margin: 3rem auto;
+}
+ /* Projetos */
+
+ #projects {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.projects__content {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.projects__content h3 {
+    font-size: 1.4rem;
+    color: deepskyblue;
+}
+
+.projects__content p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.projects-carousel {
+    display: flex;
+    transition: .2s;
+}
+
+.projects-carousel article {
+    display: inline-block;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    background-color: hsl(0, 0%, 5%);
+    padding: 1rem;
+    margin-right: 1rem;
+    width: 12.5rem;
+    aspect-ratio: .7;
+    transition: .2s;
+    background-size: 100%;
+}
+
+.projects-carousel article:nth-child(1) {
+    background-image: url('https://images.unsplash.com/photo-1526512340740-9217d0159da9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmVydGljYWx8ZW58MHx8MHx8&w=1000&q=80');
+}
+
+.projects-carousel article:nth-child(2) {
+    background-image: url('https://wallpaper.dog/large/20506264.jpg');
+}
+
+.projects-carousel article:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlY2h8ZW58MHx8MHx8&w=1000&q=80');
+}
+
+.projects-carousel article:nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dmVydGljYWx8ZW58MHx8MHx8&w=1000&q=80');
+}
+
+.projects-carousel article:nth-child(5) {
+    background-image: url('');
+}
+
+.projects-carousel article:focus,
+#projects button:focus {
+    outline: 2px solid deepskyblue;
+}
+
+#projects article:hover {
+    transform: scale(1.02);
+}
+
+.carousel-dot-right,
+.carousel-dot-left {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    background-color: hsl(50, 100%, 50%);
+    border-radius: 50%;
+    display: block;
+    padding: 1rem;
+}
+
+.carousel-dot-right {
+    right: 0;
+}
+
+.carousel-dot-right .icon,
+.carousel-dot-left .icon {
+    display: block;
+    height: 20px;
+    width: 20px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.carousel-dot-left {
+    left: 0;
+}
+
+
+
+
+/* Profissões e habilidades */
+
+.qualification-articles-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    max-width: 1000px;
+    margin: 3rem auto;
+    width: 100%;
+}
+
+.qualification {
+    text-align: left;
+}
+
+.competency-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background-color: hsla(0, 0%, 50%, .2);
+    width: 100%;
+}
+
+.competency-list li {
+    position: relative;
+    border-radius: 50%;
+    padding: 1.2rem;
+    transition: .3s;
+    background-color: aqua;
+    box-shadow: inset 0px calc(100px + 5rem) 0 white;
+}
+
+.competency-list li:hover {
+    box-shadow: inset 0px 0px 0 white;
+}
+
+.competency-list li img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.competency-list li .tooltip {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 70%;
+    z-index: 20;
+    background-color: orange;
+    color: white;
+    padding: .3rem;
+    opacity: 0;
+    border-radius: .3rem;
+}
+
+.competency-list li:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .1s ease-out;
+}
+
+
+
+
+/* Artigos */
+
+.articles__content {
+    padding: .5rem;
+    max-height: 700px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: orange hsla(0, 0%, 50%, .1);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.filter .drop-btn {
+    color: #333;
+    margin-bottom: .3rem;
+}
+
+.filter .dropper {
+    transition: 0s;
+    position: absolute;
+}
+
+.filter .dropper li a {
+    font-size: .7rem;
+    display: block;
+    padding: 1rem;
+    min-width: 100px;
+    color: #555;
+    background-color: #eee;
+}
+
+.filter .dropper li a:hover {
+    background-color: #ccc;
+}
+
+
+.articles__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.articles article {
+    background-color: hsla(0, 0%, 50%, .2);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: .7rem;
+}
+
+.articles article h3 {
+    font-size: 2em;
+    padding: 0 0 .8rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #999;
+}
+
+.articles article p {
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.articles article a {
+    display: inline-block;
+    background-color: brown;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+/* Sobre mim */
+
+#about {
+    margin: 2rem auto;
+    padding: 2rem;
+    line-height: 1.7;
+    height: max-content;
+    background-color: #eee;
+}
+
+#about .col-1-3 {
+    background-color: hsl(0, 0%, 100%, .6);
+}
+
+#about p,
+#about adress {
+    font-size: .8rem;
+}
+
+@media screen and (max-width:1100px) {
+    ul.social-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .competency-list li .tooltip {
+        left: 50%;
+        top: unset;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width:750px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-1-3,
+    .col-2-3 {
+        width: 100%;
+    }
+
+    .projects-carousel article {
+        width: 33vw;
+    }
+
+    .qualification-articles-container {
+        flex-direction: column-reverse;
+    }
+
+    .articles__content {
+        width: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+
+    .projects-carousel article {
+        width: 45vw;
+    }
+
+    .articles__content {
+        grid-template-columns: 1fr;
+    }
+
+    .competency-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    #about {
+        padding: 2rem 0;
+    }
+
+    #about h2 {
+        padding-left: 1rem;
+    }
+
+}
